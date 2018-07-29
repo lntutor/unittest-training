@@ -10,7 +10,7 @@
 * JsonPath (json-path and json-path-assert). We use JsonPath when we are writing assertions for JSON documents returned by our REST .
 
 ## Unit Test Specs:
-### Get Student Entries:
+### 1. GET Student Entries:
 #### Expected Behavior
 The controller method which returns all students entries stored to the database is implemented by following these steps:
 
@@ -31,7 +31,7 @@ We can write an unit test for this controller method by following these steps:
 10. Ensure that no other methods of our mock object are called during the test.
 
 
-### Get Single Student Entry:
+### 2. GET Single Student Entry:
 
 The second controller method which we have to test returns the information of a single students entry. Let’s find out how this controller method is implemented.
 
@@ -65,7 +65,7 @@ Second, we must write a test which ensures that the correct data is returned whe
 9. Ensure that the findById() method of the StudentRepository interface is called only once by using the correct method parameter (1L).
 10. Verify that the other methods of our mock object are not called during the test.
 
-### Add New student Entry:
+### 3. POST: Add New student Entry:
 
 The third controller method adds a new student entry to the database and returns the information of the added student entry. Let’s move on and find out how it is implemented.
 
@@ -79,18 +79,18 @@ The controller method which adds new student entries to the database is implemen
 If the validation fails, a TransactionSystemException is thrown. The HTTP status code 400 is returned to the client.
   1. The maximum length of the name is 100 characters.
   2. The maximum length of the passportNumber is 15 characters.
-  3. The name/passportNumber of a todo entry cannot be empty.
+  3. The name/passportNumber of a Student entry cannot be empty.
   
 3. It Adds a new student entry to the database and return http response status code = 201
 
 
 ##### Test 1: Validation Fails
-Our first test ensures that our application is working properly when the validation of the added todo entry fails. We can write this test by following these steps:
+Our first test ensures that our application is working properly when the validation of the added Student entry fails. We can write this test by following these steps:
 
 1. Create a name which has 100 characters.
 2. Create a passportNumber which has 100 characters.
 3. Create a new Student object. Set the name and the passportNumber of the object.
-4. Execute a POST request to url ‘/api/todo’. Set the content type of the request to ‘application/json’. Set the character set of the request to ‘UTF-8’.
+4. Execute a POST request to url ‘/Student’. Set the content type of the request to ‘application/json’. Set the character set of the request to ‘UTF-8’.
 5. Verify that the HTTP status code 400 is returned.
 6. Verify that the content type of the response is ‘application/json’ and its content type is ‘UTF-8’.
 7. Verify that the methods of our mock object are not called during our test.
@@ -98,7 +98,7 @@ Our first test ensures that our application is working properly when the validat
 ##### Test 2: Validation pass, similar to failed case but return http response status code = 201
 
 
-### Delete Student entry by ID
+### 4. DELETE Student entry by ID
 * Expected Behavior
 1. Student found, delete student entry and return http code 200
 2. Student not found, return 404
@@ -107,7 +107,7 @@ Our first test ensures that our application is working properly when the validat
 ...
 
 
-### Update Student entry by ID
+### 5. PUT Update Student entry by ID
 
 Similar to Add new Student cases
 
