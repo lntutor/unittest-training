@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "330602c6-02b2-4eaf-8243-0c2e66dce2a0",
+		"name": "Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "47f95dd2-71f3-4c83-9a34-6922bdeefd11",
+			"name": "Get entity by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/student/113213213",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"113213213"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "3f44913b-5732-44af-98cb-9d748d774c82",
+			"name": "Get all entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "dc2bcd9f-23f4-47b2-b518-233ac4c710db",
+			"name": "Create entity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bob\",\n    \"passportNumber\": \"E1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "bd48d215-fc08-4999-b97c-642409c4d043",
+			"name": "Update entity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bob-updated1\",\n    \"passportNumber\": \"E1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "b4f45e0c-17e9-43bd-ae3d-2b7d156f3ef1",
+			"name": "Delete Entity",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n    \"name\": \"Bob-updated\",\n    \"passportNumber\": \"E1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
