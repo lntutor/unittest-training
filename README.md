@@ -10,6 +10,9 @@
 * JsonPath (json-path and json-path-assert). We use JsonPath when we are writing assertions for JSON documents returned by our REST .
 
 ## Unit Test Specs:
+
+### Goal: Lines and Method test coverage > 80%
+
 ### 1. GET Student Entries:
 #### Expected Behavior
 The controller method which returns all students entries stored to the database is implemented by following these steps:
