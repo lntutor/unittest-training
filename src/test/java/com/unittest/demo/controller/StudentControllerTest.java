@@ -1,4 +1,4 @@
-package com.unittest.demo;
+package com.unittest.demo.controller;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
