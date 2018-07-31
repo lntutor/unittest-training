@@ -11,7 +11,7 @@
 
 ## Unit Test Specs:
 
-### Goal: Lines and Method test coverage > 80%
+### Goal: Lines and Method test coverage > 90%
 
 ### 1. GET Student Entries:
 #### Expected Behavior
