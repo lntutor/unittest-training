@@ -27,7 +27,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.unittest.demo.controller.StudentController;
 import com.unittest.demo.model.Student;
 import com.unittest.demo.repository.StudentRepository;
 
